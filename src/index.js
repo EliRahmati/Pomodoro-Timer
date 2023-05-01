@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import {Button} from '@mui/material';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -45,12 +46,12 @@ function Pomodoro(props) {
 
   return (
     <div>
-      <button onClick={handlePomodo}>Pomodoro</button>
-      <button onClick={handleShortBreak}>Short Break</button>
-      <button onClick={handleLongBreak}>Long Break</button>
-      <p>Time: {Math.floor(time / 60)} min : {time % 60} seconds</p>
-      <button onClick={handleStartTimer}>Start</button>
-      <button onClick={handleStopTimer}>Stop</button>
+      <Button variant="contained" style={{margin: 5}} onClick={handlePomodo}>Pomodoro</Button>
+      <Button variant="contained" style={{margin: 5}} onClick={handleShortBreak}>Short Break</Button>
+      <Button variant="contained" style={{margin: 5}} onClick={handleLongBreak}>Long Break</Button>
+      <h1>Time: {Math.floor(time / 60)} min : {time % 60} seconds</h1>
+      <Button variant="contained" style={{margin: 5}} onClick={handleStartTimer}>Start</Button>
+      <Button variant="contained" style={{margin: 5}} onClick={handleStopTimer}>Stop</Button>
     </div>
   );
 }
